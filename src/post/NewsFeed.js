@@ -55,7 +55,7 @@ const NewsFeed = () => {
     };
   }, []);
 
-  console.log("POSTS", posts);
+  //console.log("POSTS", posts);
   //console.log("RELOAD", reload);
 
   //   const addPost = (post) => {

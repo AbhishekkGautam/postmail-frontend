@@ -47,7 +47,7 @@ const Signin = (props) => {
     error: "",
     redirect: false,
   });
-  console.log("SIGNIN VALUES", values);
+  //console.log("SIGNIN VALUES", values);
 
   const { email, password, error, redirect } = values;
 
