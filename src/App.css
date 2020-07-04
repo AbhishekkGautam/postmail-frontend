@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+.read-more-button {
+  color: rgb(21, 144, 245);
+  font-size: 14px;
+}
+.MuiTab-root {
+  box-shadow: "none";
+}
+.hashtag span {
+  color: rgba(33, 150, 243, 1);
+}
