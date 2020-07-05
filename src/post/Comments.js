@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CardHeader from "@material-ui/core/CardHeader";
 import TextField from "@material-ui/core/TextField";
 import Avatar from "@material-ui/core/Avatar";
-import Icon from "@material-ui/core/Icon";
+//import Icon from "@material-ui/core/Icon";
 import { makeStyles } from "@material-ui/core/styles";
 import { comment, uncomment } from "./post-api";
 import { isAuthenticated } from "../auth/auth-helper";
@@ -13,7 +13,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import InputBase from "@material-ui/core/InputBase";
-import { IconButton } from "@material-ui/core";
+import { IconButton, Typography } from "@material-ui/core";
 
 //import useMediaQuery from "@material-ui/core/useMediaQuery";
 //import { useTheme } from "@material-ui/core/styles";
@@ -98,7 +98,11 @@ const Comments = ({ postId, updateComments, comments }) => {
   const commentBody = (item) => {
     return (
       <p className={classes.commentText} style={{ backgroundColor: "#fafafa" }}>
-        <span style={{ display: "block" }}>
+        <span
+          style={{
+            display: "block",
+          }}
+        >
           <Link
             to={`/user/${item.postedBy._id}`}
             style={{ textDecoration: "none" }}
@@ -106,18 +110,22 @@ const Comments = ({ postId, updateComments, comments }) => {
             {item.postedBy.name}
           </Link>
           {isAuthenticated().user._id === item.postedBy._id && (
-            <Icon
+            <CloseIcon
               onClick={deleteComment(item)}
               className={classes.commentDelete}
-            >
-              delete
-            </Icon>
+            />
           )}
         </span>
-        <br />
-        {item.text}
+        <span>
+          <Typography>{item.text}</Typography>
+        </span>
         <span className={classes.commentDate}>
-          {new Date(item.created).toDateString()}
+          <Typography variant="caption">
+            {new Date(item.created).toLocaleString("default", {
+              month: "long",
+              day: "2-digit",
+            })}
+          </Typography>
         </span>
       </p>
     );

@@ -10,13 +10,13 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 //import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import Snackbar from "@material-ui/core/Snackbar";
+//import Snackbar from "@material-ui/core/Snackbar";
 //import ViewIcon from "@material-ui/icons/Visibility";
 import { Link } from "react-router-dom";
 import { findPeople, follow } from "./user-api";
 import { isAuthenticated } from "../auth/auth-helper";
 import { API } from "../backend";
-import { Divider, Hidden, Box, Container } from "@material-ui/core";
+import { Hidden, Box, Container } from "@material-ui/core";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
