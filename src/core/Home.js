@@ -60,34 +60,28 @@ const Home = ({ history }) => {
   return (
     <div className={classes.root}>
       {!defaultPage && (
-        <div>
-          <Container maxwidth="sm">
-            <Grid container spacing={8}>
-              <Grid item xs={12} sm={12} lg={7}>
-                <div>
-                  <CardMedia
-                    className={classes.media}
-                    image={logo}
-                    title="Logo"
-                  />
-                  <Typography variant="h5" className={classes.title}>
-                    PostMail helps you share your thoughts with people who
-                    follows you.
-                  </Typography>
-                </div>
-              </Grid>
-              <Grid item xs={12} sm={12} lg={5}>
-                <div>
-                  <Typography variant="h5" className={classes.title}>
-                    Create an account
-                  </Typography>
-                  <Typography variant="h6" className={classes.title}>
-                    It's free and easy.
-                  </Typography>
-                </div>
-              </Grid>
+        <div style={{ textAlign: "center" }}>
+          <Grid container spacing={8}>
+            <Grid item xs={12} sm={12} lg={6}>
+              <div>
+                <CardMedia
+                  className={classes.media}
+                  image={logo}
+                  title="Logo"
+                />
+                <Typography variant="h5" style={{ paddingTop: 5 }}>
+                  PostMail helps you share your thoughts with people who follows
+                  you.
+                </Typography>
+              </div>
             </Grid>
-          </Container>
+            <Grid item xs={12} sm={12} lg={6}>
+              <div>
+                <Typography variant="h5">Create an account</Typography>
+                <Typography variant="h6">It's free and easy.</Typography>
+              </div>
+            </Grid>
+          </Grid>
         </div>
       )}
       {defaultPage && (
