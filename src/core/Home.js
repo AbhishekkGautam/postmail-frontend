@@ -4,7 +4,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import architecture from "./../assets/images/architecture.jpg";
+import logo from "./../assets/images/postmail.png";
 //import { Link } from "react-router-dom";
 import { isAuthenticated } from "../auth/auth-helper";
 import { Grid, Container, Hidden } from "@material-ui/core";
@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   media: {
-    minHeight: 400,
+    width: 100,
+    height: 100,
   },
   credit: {
     padding: 10,
@@ -59,41 +60,37 @@ const Home = ({ history }) => {
   return (
     <div className={classes.root}>
       {!defaultPage && (
-        <Grid container spacing={8}>
-          <Grid item xs={12}>
-            <Card className={classes.card}>
-              <Typography variant="h6" className={classes.title}>
-                Home Page
-              </Typography>
-              <CardMedia
-                className={classes.media}
-                image={architecture}
-                title="Unicorn Bicycle"
-              />
-              <Typography
-                variant="body2"
-                component="p"
-                className={classes.credit}
-                color="textSecondary"
-              >
-                Photo by{" "}
-                <a
-                  href="https://unsplash.com/@boudewijn_huysmans"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Boudewijn Huysmans
-                </a>{" "}
-                on Unsplash
-              </Typography>
-              <CardContent>
-                <Typography type="body1" component="p">
-                  Welcome to the MERN Social home page.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+        <div>
+          <Hidden mdDown>
+            <Container maxwidth="sm">
+              <Grid container spacing={8}>
+                <Grid item xs={12} sm={12} lg={7}>
+                  <div>
+                    <CardMedia
+                      className={classes.media}
+                      image={logo}
+                      title="Logo"
+                    />
+                    <Typography variant="h5" className={classes.title}>
+                      PostMail helps you share your thoughts with people who
+                      follows you.
+                    </Typography>
+                  </div>
+                </Grid>
+                <Grid item xs={12} sm={12} lg={5}>
+                  <div>
+                    <Typography variant="h5" className={classes.title}>
+                      Create an account
+                    </Typography>
+                    <Typography variant="h6" className={classes.title}>
+                      It's free and easy.
+                    </Typography>
+                  </div>
+                </Grid>
+              </Grid>
+            </Container>
+          </Hidden>
+        </div>
       )}
       {defaultPage && (
         <div>
