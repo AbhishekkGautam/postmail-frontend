@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   likes: {
     marginTop: theme.spacing(-2),
     color: "#757575",
-    fontSize: 12,
+    fontSize: 13,
     [theme.breakpoints.down("xs")]: {
       marginTop: theme.spacing(0),
     },
