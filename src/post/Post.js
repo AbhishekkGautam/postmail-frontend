@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
 
   likeIcon: {
     [theme.breakpoints.down("xs")]: {
-      marginTop: theme.spacing(-1),
+      marginTop: theme.spacing(0),
     },
   },
   comments: {
