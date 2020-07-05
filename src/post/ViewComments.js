@@ -147,7 +147,10 @@ const ViewComments = ({ postId, updateComments, comments }) => {
         style={{ color: "#42a5f5" }}
         onClick={() => setOpen(true)}
       >
-        <ChatBubbleOutlineOutlinedIcon style={{ fontSize: 19 }} />
+        <ChatBubbleOutlineOutlinedIcon
+          style={{ fontSize: 19 }}
+          className={classes.commentIcon}
+        />
       </IconButton>
       <Dialog
         fullWidth="true"

@@ -73,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
   likes: {
     marginTop: theme.spacing(-2),
     color: "#757575",
-    fontSize: 13,
+    fontSize: 14,
     [theme.breakpoints.down("xs")]: {
       marginTop: theme.spacing(0),
     },
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
 
   likeIcon: {
     [theme.breakpoints.down("xs")]: {
-      marginTop: theme.spacing(0),
+      marginTop: -2,
     },
   },
   comments: {

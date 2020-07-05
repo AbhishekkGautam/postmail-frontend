@@ -52,6 +52,11 @@ const useStyles = makeStyles((theme) => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
+  commentIcon: {
+    [theme.breakpoints.down("xs")]: {
+      marginTop: -2,
+    },
+  },
 }));
 
 const Comments = ({ postId, updateComments, comments }) => {
