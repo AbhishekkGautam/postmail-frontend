@@ -228,7 +228,7 @@ const FindPeople = () => {
                             textTransform: "none",
                             width: 80,
                             height: 30,
-                            paddingTop: -5,
+                            paddingTop: -8,
                           }}
                         >
                           Follow

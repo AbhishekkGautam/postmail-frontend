@@ -60,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
       marginTop: theme.spacing(0),
     },
   },
+  commentIcon: {
+    [theme.breakpoints.down("xs")]: {
+      marginTop: -3,
+    },
+  },
 }));
 
 const ViewComments = ({ postId, updateComments, comments }) => {
