@@ -73,8 +73,15 @@ const useStyles = makeStyles((theme) => ({
   likes: {
     marginTop: theme.spacing(-2),
     color: "#757575",
+    fontSize: 12,
     [theme.breakpoints.down("xs")]: {
-      marginTop: theme.spacing(-2),
+      marginTop: theme.spacing(0),
+    },
+  },
+
+  likeIcon: {
+    [theme.breakpoints.down("xs")]: {
+      marginTop: theme.spacing(-3),
     },
   },
   comments: {
@@ -213,7 +220,10 @@ const Post = ({ post, onRemove, history }) => {
               aria-label="Like"
               color="secondary"
             >
-              <FavoriteIcon style={{ fontSize: 20 }} />
+              <FavoriteIcon
+                style={{ fontSize: 20 }}
+                className={classes.likeIcon}
+              />
             </IconButton>
           ) : (
             <IconButton
@@ -222,7 +232,10 @@ const Post = ({ post, onRemove, history }) => {
               aria-label="Unlike"
               style={{ color: "#42a5f5" }}
             >
-              <FavoriteBorderIcon style={{ fontSize: 20 }} />
+              <FavoriteBorderIcon
+                style={{ fontSize: 20 }}
+                className={classes.likeIcon}
+              />
             </IconButton>
           )}
           <Typography component="p" className={classes.likes}>
