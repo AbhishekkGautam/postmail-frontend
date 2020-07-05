@@ -7,9 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import logo from "./../assets/images/postmail.png";
 //import { Link } from "react-router-dom";
 import { isAuthenticated } from "../auth/auth-helper";
-import { Grid, Container, Hidden } from "@material-ui/core";
+import { Grid, Container, Hidden, Button } from "@material-ui/core";
 import FindPeople from "../user/FindPeople";
 import NewsFeed from "../post/NewsFeed";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,8 +31,9 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   media: {
-    width: 100,
-    height: 100,
+    width: 120,
+    height: 120,
+    alignSelf: "center",
   },
   credit: {
     padding: 10,
@@ -41,6 +43,12 @@ const useStyles = makeStyles((theme) => ({
     "& a": {
       color: "#3f4771",
     },
+  },
+  submit: {
+    margin: theme.spacing(2),
+    marginRight: 20,
+    textTransform: "none",
+    width: 120,
   },
 }));
 
@@ -78,7 +86,34 @@ const Home = ({ history }) => {
             <Grid item xs={12} sm={12} lg={6}>
               <div>
                 <Typography variant="h5">Create an account</Typography>
-                <Typography variant="h6">It's free and easy.</Typography>
+                <Typography variant="h6" style={{ color: "#616161" }}>
+                  It's free and easy.
+                </Typography>
+              </div>
+              <div>
+                <Link to={"/signup"} style={{ textDecoration: "none" }}>
+                  <Button
+                    disableElevation
+                    color="primary"
+                    variant="contained"
+                    className={classes.submit}
+                  >
+                    Sign Up
+                  </Button>
+                </Link>
+                <Typography variant="h6" style={{ color: "#616161" }}>
+                  OR
+                </Typography>
+                <Link to={"/signin"} style={{ textDecoration: "none" }}>
+                  <Button
+                    disableElevation
+                    color="primary"
+                    variant="contained"
+                    className={classes.submit}
+                  >
+                    Login
+                  </Button>
+                </Link>
               </div>
             </Grid>
           </Grid>
