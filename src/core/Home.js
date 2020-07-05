@@ -96,18 +96,30 @@ const Home = ({ history }) => {
         </Grid>
       )}
       {defaultPage && (
-        <Container maxwidth="sm">
-          <Grid container spacing={8}>
-            <Grid item xs={12} sm={12} lg={7}>
-              <NewsFeed />
-            </Grid>
-            <Hidden mdDown>
+        <div>
+          <Hidden mdDown>
+            <Container maxwidth="sm">
+              <Grid container spacing={8}>
+                <Grid item xs={12} sm={12} lg={7}>
+                  <NewsFeed />
+                </Grid>
+                <Grid item xs={12} sm={12} lg={5}>
+                  <FindPeople />
+                </Grid>
+              </Grid>
+            </Container>
+          </Hidden>
+          <Hidden lgUp>
+            <Grid container spacing={8}>
+              <Grid item xs={12} sm={12} lg={7}>
+                <NewsFeed />
+              </Grid>
               <Grid item xs={12} sm={12} lg={5}>
                 <FindPeople />
               </Grid>
-            </Hidden>
-          </Grid>
-        </Container>
+            </Grid>
+          </Hidden>
+        </div>
       )}
     </div>
   );
