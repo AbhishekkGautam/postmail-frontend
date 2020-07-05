@@ -246,9 +246,9 @@ const Post = ({ post, onRemove, history }) => {
         />
       </Card>
       <Dialog open={open} onClose={handleRequestClose}>
-        <DialogTitle>{"Delete Account"}</DialogTitle>
+        <DialogTitle>{"Delete Post"}</DialogTitle>
         <DialogContent>
-          <DialogContentText>Confirm to delete your account.</DialogContentText>
+          <DialogContentText>Confirm to delete your post.</DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleRequestClose} color="primary">
