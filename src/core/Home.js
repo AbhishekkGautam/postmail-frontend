@@ -31,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   media: {
-    width: 120,
-    height: 120,
+    width: 140,
+    height: 140,
     alignSelf: "center",
   },
   credit: {
@@ -68,55 +68,113 @@ const Home = ({ history }) => {
   return (
     <div className={classes.root}>
       {!defaultPage && (
-        <div style={{ textAlign: "center" }}>
-          <Grid container spacing={8}>
-            <Grid item xs={12} sm={12} lg={6}>
-              <div>
-                <CardMedia
-                  className={classes.media}
-                  image={logo}
-                  title="Logo"
-                />
-                <Typography variant="h5" style={{ paddingTop: 5 }}>
-                  PostMail helps you share your thoughts with people who follows
-                  you.
-                </Typography>
+        <div>
+          <Hidden smDown>
+            <Container maxwidth="sm">
+              <div style={{ textAlign: "center" }}>
+                <Grid container spacing={8}>
+                  <Grid item xs={12} sm={12} lg={6}>
+                    <div style={{ textAlign: "center" }}>
+                      <CardMedia
+                        className={classes.media}
+                        image={logo}
+                        title="Logo"
+                      />
+                      <Typography variant="h4" style={{ paddingTop: 5 }}>
+                        PostMail helps you share your thoughts with people who
+                        follows you.
+                      </Typography>
+                    </div>
+                  </Grid>
+                  <Grid item xs={12} sm={12} lg={6}>
+                    <div>
+                      <Typography variant="h5">Create an account</Typography>
+                      <Typography variant="h6" style={{ color: "#616161" }}>
+                        It's free and easy.
+                      </Typography>
+                    </div>
+                    <div>
+                      <Link to={"/signup"} style={{ textDecoration: "none" }}>
+                        <Button
+                          disableElevation
+                          color="primary"
+                          variant="contained"
+                          className={classes.submit}
+                        >
+                          Sign Up
+                        </Button>
+                      </Link>
+                      <Typography variant="h6" style={{ color: "#616161" }}>
+                        OR
+                      </Typography>
+                      <Link to={"/signin"} style={{ textDecoration: "none" }}>
+                        <Button
+                          disableElevation
+                          color="primary"
+                          variant="contained"
+                          className={classes.submit}
+                        >
+                          Login
+                        </Button>
+                      </Link>
+                    </div>
+                  </Grid>
+                </Grid>
               </div>
-            </Grid>
-            <Grid item xs={12} sm={12} lg={6}>
-              <div>
-                <Typography variant="h5">Create an account</Typography>
-                <Typography variant="h6" style={{ color: "#616161" }}>
-                  It's free and easy.
-                </Typography>
-              </div>
-              <div>
-                <Link to={"/signup"} style={{ textDecoration: "none" }}>
-                  <Button
-                    disableElevation
-                    color="primary"
-                    variant="contained"
-                    className={classes.submit}
-                  >
-                    Sign Up
-                  </Button>
-                </Link>
-                <Typography variant="h6" style={{ color: "#616161" }}>
-                  OR
-                </Typography>
-                <Link to={"/signin"} style={{ textDecoration: "none" }}>
-                  <Button
-                    disableElevation
-                    color="primary"
-                    variant="contained"
-                    className={classes.submit}
-                  >
-                    Login
-                  </Button>
-                </Link>
-              </div>
-            </Grid>
-          </Grid>
+            </Container>
+          </Hidden>
+          <Hidden mdUp>
+            <div style={{ textAlign: "center" }}>
+              <Grid container spacing={8}>
+                <Grid item xs={12} sm={12} lg={6}>
+                  <div style={{ textAlign: "center" }}>
+                    <CardMedia
+                      className={classes.media}
+                      image={logo}
+                      title="Logo"
+                    />
+                    <Typography variant="h4" style={{ paddingTop: 5 }}>
+                      PostMail helps you share your thoughts with people who
+                      follows you.
+                    </Typography>
+                  </div>
+                </Grid>
+                <Grid item xs={12} sm={12} lg={6}>
+                  <div>
+                    <Typography variant="h5">Create an account</Typography>
+                    <Typography variant="h6" style={{ color: "#616161" }}>
+                      It's free and easy.
+                    </Typography>
+                  </div>
+                  <div>
+                    <Link to={"/signup"} style={{ textDecoration: "none" }}>
+                      <Button
+                        disableElevation
+                        color="primary"
+                        variant="contained"
+                        className={classes.submit}
+                      >
+                        Sign Up
+                      </Button>
+                    </Link>
+                    <Typography variant="h6" style={{ color: "#616161" }}>
+                      OR
+                    </Typography>
+                    <Link to={"/signin"} style={{ textDecoration: "none" }}>
+                      <Button
+                        disableElevation
+                        color="primary"
+                        variant="contained"
+                        className={classes.submit}
+                      >
+                        Login
+                      </Button>
+                    </Link>
+                  </div>
+                </Grid>
+              </Grid>
+            </div>
+          </Hidden>
         </div>
       )}
       {defaultPage && (
