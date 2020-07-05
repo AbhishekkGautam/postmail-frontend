@@ -41,9 +41,10 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "0.8em",
   },
   commentDelete: {
-    fontSize: "1.6em",
-    verticalAlign: "middle",
+    fontSize: "1.1em",
     cursor: "pointer",
+    float: "right",
+    color: theme.palette.grey[500],
   },
   closeButton: {
     position: "absolute",

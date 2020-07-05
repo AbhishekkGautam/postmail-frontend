@@ -66,15 +66,24 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(-2),
     width: 33,
     height: 33,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: theme.spacing(0),
+    },
   },
   likes: {
     marginTop: theme.spacing(-2),
     color: "#757575",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: theme.spacing(-2),
+    },
   },
   comments: {
     marginTop: theme.spacing(-2),
     color: "#757575",
     fontSize: 12,
+    [theme.breakpoints.down("xs")]: {
+      marginTop: theme.spacing(0),
+    },
   },
   subheader: {
     fontSize: 10,
