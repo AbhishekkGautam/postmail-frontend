@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   commentIcon: {
     [theme.breakpoints.down("xs")]: {
-      marginTop: -2,
+      marginTop: -3,
     },
   },
 }));

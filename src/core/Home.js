@@ -114,9 +114,6 @@ const Home = ({ history }) => {
               <Grid item xs={12} sm={12} lg={7}>
                 <NewsFeed />
               </Grid>
-              <Grid item xs={12} sm={12} lg={5}>
-                <FindPeople />
-              </Grid>
             </Grid>
           </Hidden>
         </div>
